@@ -1,0 +1,31 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :CI do
+   run_tests(project: "iOS_Basic_Jenkins.xcodeproj",
+      devices: ["iPhone 11"],
+      scheme: "iOS_Basic_Jenkins")
+  end
+
+lane :CD do |values|
+
+    gym(scheme: 'iOS_Basic_Jenkins', project: "iOS_Basic_Jenkins.xcodeproj", clean: true, silent: true, include_bitcode: false, export_method: 'ad-hoc')
+
+    end
+end
