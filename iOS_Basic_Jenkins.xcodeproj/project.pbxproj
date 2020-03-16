@@ -15,6 +15,10 @@
 		5ACD801A241F6BF9003D9B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACD8018241F6BF9003D9B0B /* LaunchScreen.storyboard */; };
 		5ACD8025241F6BF9003D9B0B /* iOS_Basic_JenkinsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD8024241F6BF9003D9B0B /* iOS_Basic_JenkinsTests.swift */; };
 		5ACD8030241F6BF9003D9B0B /* iOS_Basic_JenkinsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD802F241F6BF9003D9B0B /* iOS_Basic_JenkinsUITests.swift */; };
+		5ACD8045241F6EDB003D9B0B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACD803E241F6EA3003D9B0B /* Quick.framework */; };
+		5ACD8046241F6EDB003D9B0B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACD8042241F6EA5003D9B0B /* Nimble.framework */; };
+		5ACD8048241F6EF5003D9B0B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ACD8042241F6EA5003D9B0B /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5ACD8049241F6EF5003D9B0B /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ACD803E241F6EA3003D9B0B /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5ACD8047241F6EE8003D9B0B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5ACD8048241F6EF5003D9B0B /* Nimble.framework in CopyFiles */,
+				5ACD8049241F6EF5003D9B0B /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5ACD800A241F6BF6003D9B0B /* iOS_Basic_Jenkins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Basic_Jenkins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACD800D241F6BF6003D9B0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +67,8 @@
 		5ACD802B241F6BF9003D9B0B /* iOS_Basic_JenkinsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_Basic_JenkinsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACD802F241F6BF9003D9B0B /* iOS_Basic_JenkinsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Basic_JenkinsUITests.swift; sourceTree = "<group>"; };
 		5ACD8031241F6BF9003D9B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ACD803E241F6EA3003D9B0B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		5ACD8042241F6EA5003D9B0B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACD8045241F6EDB003D9B0B /* Quick.framework in Frameworks */,
+				5ACD8046241F6EDB003D9B0B /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +105,7 @@
 				5ACD8023241F6BF9003D9B0B /* iOS_Basic_JenkinsTests */,
 				5ACD802E241F6BF9003D9B0B /* iOS_Basic_JenkinsUITests */,
 				5ACD800B241F6BF6003D9B0B /* Products */,
+				5ACD803D241F6EA3003D9B0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +151,15 @@
 			path = iOS_Basic_JenkinsUITests;
 			sourceTree = "<group>";
 		};
+		5ACD803D241F6EA3003D9B0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ACD8042241F6EA5003D9B0B /* Nimble.framework */,
+				5ACD803E241F6EA3003D9B0B /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +187,7 @@
 				5ACD801C241F6BF9003D9B0B /* Sources */,
 				5ACD801D241F6BF9003D9B0B /* Frameworks */,
 				5ACD801E241F6BF9003D9B0B /* Resources */,
+				5ACD8047241F6EE8003D9B0B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -434,8 +467,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LRTCB5WQ93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOS_Basic_Jenkins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,6 +481,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thevis.iOS-Basic-Jenkins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "adhoc-jenkins";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,8 +491,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LRTCB5WQ93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOS_Basic_Jenkins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -461,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thevis.iOS-Basic-Jenkins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "adhoc-jenkins";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,6 +518,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRTCB5WQ93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOS_Basic_JenkinsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,6 +544,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRTCB5WQ93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOS_Basic_JenkinsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

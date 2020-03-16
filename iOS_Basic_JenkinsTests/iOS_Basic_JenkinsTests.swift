@@ -7,6 +7,9 @@
 //
 
 import XCTest
+import Quick
+import Nimble
+
 @testable import iOS_Basic_Jenkins
 
 class iOS_Basic_JenkinsTests: XCTestCase {
